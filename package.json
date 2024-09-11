@@ -1,8 +1,13 @@
 {
   "dependencies": {
     "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
     "express": "^4.20.0",
     "firebase-admin": "^12.4.0",
     "web-push": "^3.6.7"
+  },
+  "scripts": {
+    "docker-build": "docker build -t fcm-notif-server .",
+    "docker-run": "docker run -d -p 1000:1000 --name fcm-notif-server:latest fcm-notif-server"
   }
 }
